@@ -1,8 +1,9 @@
-import { SummaryItemType } from "../types";
+import CountUp from "react-countup";
+import { Metric } from "../types";
 
-type SummaryItemProps = SummaryItemType & {};
+type MetricItemProps = Metric & {};
 
-export const SummaryItem = ({ category, score, icon }: SummaryItemProps) => {
+export const MetricItem = ({ category, score, icon }: MetricItemProps) => {
   const colorCombination = {
     Reaction: {
       text: "text-summaryReactionText",
@@ -23,17 +24,17 @@ export const SummaryItem = ({ category, score, icon }: SummaryItemProps) => {
   }[category];
 
   return (
-    <div
-      className={`flex justify-between p-4 rounded-xl ${colorCombination?.background}`}
+    <li
+      className={`summary-item flex justify-between p-4 rounded-xl ${colorCombination?.background}`}
     >
       <div className="flex gap-4">
         <img src={icon} alt={`${category} icon category`} />
         <p className={colorCombination?.text}>{category}</p>
       </div>
       <strong className="text-summaryScoreTotal">
-        {score}
+        <CountUp end={score} />
         <span className="text-summaryScoreOf"> / 100</span>
       </strong>
-    </div>
+    </li>
   );
 };
