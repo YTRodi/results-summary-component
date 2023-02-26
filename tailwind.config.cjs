@@ -1,30 +1,30 @@
 const palette = {
-  violetLigher: "#c7c0ff", // Your result
-  violetLight: "#6743ff", // gradient end
-  violetPrimary: "#312cea", // gradient start
-  violetDark: "#4c23ca", // circle
+  violetLigher: '#c7c0ff', // Your result
+  violetLight: '#6743ff', // gradient end
+  violetPrimary: '#312cea', // gradient start
+  violetDark: '#4c23ca', // circle
 
-  grayLight: "#b9b4bb", // / 100
-  grayPrimary: "#303b59", // Summary, 80, 92, 61, 72, Continue
+  grayLight: '#b9b4bb', // / 100
+  grayPrimary: '#303b59', // Summary, 80, 92, 61, 72, Continue
 
-  redLight: "#fff6f5",
-  redPrimary: "#F55",
+  redLight: '#fff6f5',
+  redPrimary: '#F55',
 
-  yellowLight: "#fffbf2",
-  yellowPrimary: "#FFB21E",
+  yellowLight: '#fffbf2',
+  yellowPrimary: '#FFB21E',
 
-  aquaLight: "#f2fbfa",
-  aquaPrimary: "#00BB8F",
+  aquaLight: '#f2fbfa',
+  aquaPrimary: '#00BB8F',
 
-  blueLight: "#f3f3fd",
-  bluePrimary: "#1125D6",
+  blueLight: '#f3f3fd',
+  bluePrimary: '#1125D6',
 
-  white: "#ffffff", // main background
-};
+  white: '#ffffff', // main background
+}
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     colors: {
       ...palette,
@@ -55,26 +55,26 @@ module.exports = {
     extend: {
       keyframes: {
         fadeIn: {
-          "0%": {
+          '0%': {
             opacity: 0,
           },
         },
-        "slide-in-bottom": {
-          "0%": {
+        'slide-in-bottom': {
+          '0%': {
             opacity: 0,
-            transform: "translateY(100%)",
+            transform: 'translateY(100%)',
           },
-          "100%": {
+          '100%': {
             opacity: 1,
-            transform: "translateY(0)",
+            transform: 'translateY(0)',
           },
         },
       },
       animation: {
-        "fade-in": "fadeIn 1.2s",
-        "slide-in-bottom": "slide-in-bottom 0.8s",
+        'fade-in': 'fadeIn 1.2s',
+        'slide-in-bottom': 'slide-in-bottom 0.8s',
       },
     },
   },
   plugins: [],
-};
+}

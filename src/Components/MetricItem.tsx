@@ -26,7 +26,7 @@ export const MetricItem = ({ category, score, icon }: MetricItemProps) => {
 
   return (
     <li
-      className={`summary-item flex justify-between p-4 rounded-xl ${
+      className={`summary-item flex justify-between rounded-xl p-4 ${
         colorCombination?.background ?? ''
       }`}
     >
