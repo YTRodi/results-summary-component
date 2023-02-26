@@ -1,8 +1,8 @@
-import CountUp, { CountUpProps } from "react-countup";
+import CountUp, { type CountUpProps } from 'react-countup'
 
 interface TotalScoreProps {
-  totalScore: number;
-  onEndCountUpTotalScore: CountUpProps["onEnd"];
+  totalScore: number
+  onEndCountUpTotalScore: CountUpProps['onEnd']
 }
 
 export const TotalScore = ({
@@ -18,5 +18,5 @@ export const TotalScore = ({
         of 100
       </h3>
     </div>
-  );
-};
+  )
+}

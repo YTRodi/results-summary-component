@@ -1,10 +1,12 @@
-import { useState } from "react";
-import { TotalScore } from "./TotalScore";
-import { MetricItem } from "./MetricItem";
-import { type Metric } from "../types";
-import DATA from "../resources/data.json";
+import { useState } from 'react'
 
-const METRICS = [...DATA] satisfies Metric[];
+import DATA from '../resources/data.json'
+import { type Metric } from '../types'
+
+import { MetricItem } from './MetricItem'
+import { TotalScore } from './TotalScore'
+
+const METRICS = [...DATA] satisfies Metric[]
 
 export const ResultSummaryCard = () => {
   return (
@@ -12,16 +14,16 @@ export const ResultSummaryCard = () => {
       <ResultSection />
       <SummarySection />
     </div>
-  );
-};
+  )
+}
 
 const ResultSection = () => {
-  const [showResult, setShowResult] = useState(false);
-  const sumOfScores = METRICS.reduce((acc, cur) => acc + cur.score, 0);
-  const totalScoreAverage = sumOfScores / METRICS.length;
+  const [showResult, setShowResult] = useState(false)
+  const sumOfScores = METRICS.reduce((acc, cur) => acc + cur.score, 0)
+  const totalScoreAverage = sumOfScores / METRICS.length
   const onEndCountUpTotalScore = () => {
-    setShowResult(true);
-  };
+    setShowResult(true)
+  }
 
   return (
     <section className="bg-gradient-to-t from-resultBackground to-resultBackground/80 rounded-b-3xl sm:rounded-3xl sm:w-[340px] py-8 sm:px-8 flex flex-col justify-between gap-6">
@@ -45,8 +47,8 @@ const ResultSection = () => {
         </div>
       )}
     </section>
-  );
-};
+  )
+}
 
 const SummarySection = () => {
   return (
@@ -57,8 +59,8 @@ const SummarySection = () => {
         Continue
       </button>
     </section>
-  );
-};
+  )
+}
 
 const MetricItemList = () => {
   return (
@@ -67,5 +69,5 @@ const MetricItemList = () => {
         <MetricItem key={metricItem.category} {...metricItem} />
       ))}
     </ul>
-  );
-};
+  )
+}

@@ -5,22 +5,22 @@
 @font-face {
   font-family: HankenGrotesk;
   font-weight: 500;
-  src: url("/fonts/HankenGrotesk-Medium.woff2") format("woff2"),
-    url("/fonts/HankenGrotesk-Medium.woff") format("woff");
+  src: url('/fonts/HankenGrotesk-Medium.woff2') format('woff2'),
+    url('/fonts/HankenGrotesk-Medium.woff') format('woff');
 }
 
 @font-face {
   font-family: HankenGrotesk;
   font-weight: 700;
-  src: url("/fonts/HankenGrotesk-Bold.woff2") format("woff2"),
-    url("/fonts/HankenGrotesk-Bold.woff") format("woff");
+  src: url('/fonts/HankenGrotesk-Bold.woff2') format('woff2'),
+    url('/fonts/HankenGrotesk-Bold.woff') format('woff');
 }
 
 @font-face {
   font-family: HankenGrotesk;
   font-weight: 800;
-  src: url("/fonts/HankenGrotesk-ExtraBold.woff2") format("woff2"),
-    url("/fonts/HankenGrotesk-ExtraBold.woff") format("woff");
+  src: url('/fonts/HankenGrotesk-ExtraBold.woff2') format('woff2'),
+    url('/fonts/HankenGrotesk-ExtraBold.woff') format('woff');
 }
 
 @layer base {
