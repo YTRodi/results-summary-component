@@ -1,34 +1,37 @@
-import CountUp from "react-countup";
-import { Metric } from "../types";
+import CountUp from 'react-countup'
 
-type MetricItemProps = Metric & {};
+import { type Metric } from '../types'
+
+type MetricItemProps = Metric
 
 export const MetricItem = ({ category, score, icon }: MetricItemProps) => {
   const colorCombination = {
     Reaction: {
-      text: "text-summaryReactionText",
-      background: "bg-summaryReactionBackground",
+      text: 'text-summaryReactionText',
+      background: 'bg-summaryReactionBackground',
     },
     Memory: {
-      text: "text-summaryMemoryText",
-      background: "bg-summaryMemoryBackground",
+      text: 'text-summaryMemoryText',
+      background: 'bg-summaryMemoryBackground',
     },
     Verbal: {
-      text: "text-summaryVerbalText",
-      background: "bg-summaryVerbalBackground",
+      text: 'text-summaryVerbalText',
+      background: 'bg-summaryVerbalBackground',
     },
     Visual: {
-      text: "text-summaryVisualText",
-      background: "bg-summaryVisualBackground",
+      text: 'text-summaryVisualText',
+      background: 'bg-summaryVisualBackground',
     },
-  }[category];
+  }[category]
 
   return (
     <li
-      className={`summary-item flex justify-between p-4 rounded-xl ${colorCombination?.background}`}
+      className={`summary-item flex justify-between rounded-xl p-4 ${
+        colorCombination?.background ?? ''
+      }`}
     >
       <div className="flex gap-4">
-        <img src={icon} alt={`${category} icon category`} />
+        <img alt={`${category} icon category`} src={icon} />
         <p className={colorCombination?.text}>{category}</p>
       </div>
       <strong className="text-summaryScoreTotal">
@@ -36,5 +39,5 @@ export const MetricItem = ({ category, score, icon }: MetricItemProps) => {
         <span className="text-summaryScoreOf"> / 100</span>
       </strong>
     </li>
-  );
-};
+  )
+}

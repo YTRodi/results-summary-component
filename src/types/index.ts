@@ -1,5 +1,5 @@
-export type Metric = {
-  category: string;
-  score: number;
-  icon: string;
-};
+export interface Metric {
+  category: string
+  score: number
+  icon: string
+}
